@@ -8,8 +8,9 @@ import { now } from "./now";
 import { vol } from "./volume";
 import { playlists, playlist, tracks } from "./playlists";
 import { songs, search, song } from "./library";
-import { albums, album } from "./albums";
+import { albums, album, artists, artist } from "./albums";
 import { shuffle, repeat } from "./options";
+import { airplay } from "./airplay";
 import { help } from "./help";
 
 /**
@@ -47,10 +48,15 @@ export const commands: Record<string, Command> = {
   song,
   albums,
   album,
+  artists,
+  artist,
 
   // Playback options
   shuffle,
   repeat,
+
+  // Output devices
+  airplay,
 
   // Help
   help: () => help(),
